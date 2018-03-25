@@ -25,6 +25,30 @@ not_so_good = pd.concat([df1, df2], axis=0)
 '''not_so_good dataframe created'''
 print(not_so_good)
 print('-'*20)
+
+
+'''
+     A   B
+A0  A0  B0
+A1  A1  B1
+A2  A2  B2
+--------------------
+     A   C
+A0  A0  C0
+A1  A1  C1
+A2  A2  C2
+--------------------
+     A    B    C
+A0  A0   B0  NaN
+A1  A1   B1  NaN
+A2  A2   B2  NaN
+A0  A0  NaN   C0
+A1  A1  NaN   C1
+A2  A2  NaN   C2
+--------------------
+
+'''
+
 '''divide not_so_good into n minors and concat them column wise'''
 df3 = not_so_good[['A','B']].dropna()
 df3.set_index('A')
@@ -40,7 +64,23 @@ print('-'*20)
 much_better = pd.concat([df3, df4], axis =1 , join_axes = [df3.index])
 print(much_better)
 print('-'*20)
-
+'''
+     A   B
+A0  A0  B0
+A1  A1  B1
+A2  A2  B2
+--------------------
+     A   C
+A0  A0  C0
+A1  A1  C1
+A2  A2  C2
+--------------------
+     A   B   A   C
+A0  A0  B0  A0  C0
+A1  A1  B1  A1  C1
+A2  A2  B2  A2  C2
+--------------------
+'''
 ''' 
 # IMPROVEMENTS
 1. In much_better, column 'A' is getting repeated. Why?

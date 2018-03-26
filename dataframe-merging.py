@@ -84,5 +84,25 @@ A2  A2  B2  A2  C2
 ''' 
 # IMPROVEMENTS
 1. In much_better, column 'A' is getting repeated. Why?
+--> Because much_better is a dataframe of concatenation of two other dataframes
+    along the columns.Concatenation of two dataframes won't drop-off the common
+    column.If you want to drop the common column,try merging them instead of
+    concatenation.
+'''
+much_better=pd.merge(df3,df4,how='inner')  #Performs the inner join of two dataframes
+print('-'*20)
+print(much_better)
+print('-'*20)
+'''
+--------------------
+    A   B   C
+0  A0  B0  C0
+1  A1  B1  C1
+2  A2  B2  C2
+--------------------
+'''
+
+'''
 2. Can this entire logic be written in R?
+--> Refer the R code attached.  
 '''

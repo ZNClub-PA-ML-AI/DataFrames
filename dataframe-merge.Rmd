@@ -1,0 +1,62 @@
+---
+title: "Dataframe-merging"
+author: "Khusaal Giri"
+date: "March 25, 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Initializing the dataframes:
+```{r}
+total_values=3
+a=c()
+b=c()
+c=c()
+for(i in c(1:total_values)){
+  a[i]=i-1
+  b[i]=i-1
+  c[i]=i-1
+}
+a=paste('A',a,sep='')
+b=paste('B',b,sep='')
+c=paste('C',c,sep='')
+df1=data.frame(A=a,B=b)
+df1
+df2=data.frame(A=a,C=c)
+df2
+```
+
+Paste command will paste the character before or after every element of the vector seperated by quotes.
+
+To concat two dataframes in R,we need to have equal number of
+columns in both the dataframes.So,appending extra columns in both
+the dataframes & assigning it 'NA'
+```{r}
+df1_temp=df1
+df1_temp$C <- NA
+df1_temp
+df2_temp=df2
+df2_temp$B <- NA
+df2_temp
+```
+
+Concatenating the dataframes along the rows(Vertically):
+```{r}
+not_so_good=rbind(df1_temp,df2_temp)
+not_so_good
+```
+
+Concatenating the dataframes along the columns(Horizontally) and with repetition of the common column:
+```{r}
+much_better=cbind(df1,df2)
+much_better
+```
+
+Concatenating the dataframes along the columns(Horizontally) without the repetition of the common column(Inner join):
+```{r}
+best_result=merge(df1,df2,by='A')
+best_result
+```

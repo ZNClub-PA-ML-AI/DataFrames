@@ -11,12 +11,12 @@ math.__annotations__
 math.__call__
 math.__class__
 math.__closure__
-math.__code__
-math.__defaults__
+code = math.__code__
+math.__defaults__ #default values
 math.__delattr__
 math.__dict__
-math._dir__
-math.__doc__
+math.__dir__
+math.__doc__ #if present
 math.__eq__
 math.__format__
 math.__ge__
@@ -41,3 +41,7 @@ math.__setattr__
 math.__sizeof__
 math.__str__
 math.__subclasshook__
+
+code.co_name
+code.co_varnames
+code.co_argcount

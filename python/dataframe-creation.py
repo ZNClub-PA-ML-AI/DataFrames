@@ -58,18 +58,18 @@ df.to_csv('example.csv')
 df = pd.read_csv('example.csv')
 
 '''without headers'''
-df = pd.read_csv('example.csv', header=None)
+df = pd.read_csv('../data/example.csv', header=None)
 
 '''with new column names'''
-df = pd.read_csv('example.csv', names=['UID', 'First Name', 'Last Name', 'Age', 'Pre-Test Score', 'Post-Test Score'])
+df = pd.read_csv('../data/example.csv', names=['UID', 'First Name', 'Last Name', 'Age', 'Pre-Test Score', 'Post-Test Score'])
 
 '''??drop headers and new column names'''
 
-df = pd.read_csv('example.csv', 
+df = pd.read_csv('../data/example.csv', 
                  index_col=['First Name', 'Last Name'], 
                  names=['UID', 'First Name', 'Last Name', 'Age', 'Pre-Test Score', 'Post-Test Score'])
 #fails
-df = pd.read_csv('example.csv', 
+df = pd.read_csv('../data/example.csv', 
                  names=['UID', 'First Name', 'Last Name', 'Age', 'Pre-Test Score', 'Post-Test Score'],
                  index_col=['First Name', 'Last Name'], 
                  na_values=['.'])
@@ -78,16 +78,16 @@ df = pd.read_csv('example.csv',
 
 '''replace NA with defaul'''
 sentinels = {'Last Name': ['.', 'NA'], 'Pre-Test Score': ['.']}
-df = pd.read_csv('example.csv', na_values=sentinels)
+df = pd.read_csv('../data/example.csv', na_values=sentinels)
 
 '''skip first n rows'''
-df = pd.read_csv('example.csv', skiprows=3)
+df = pd.read_csv('../data/example.csv', skiprows=3)
 
 '''include only first n rows'''
-df = pd.read_csv('example.csv', nrows=3)
+df = pd.read_csv('../data/example.csv', nrows=3)
 
 '''replace , in string and convert to numeric'''
-df = pd.read_csv('example.csv', thousands=',')
+df = pd.read_csv('../data/example.csv', thousands=',')
 
 
 '''From JSON'''
@@ -157,13 +157,13 @@ from_json = json.loads(to_json)
 
 '''From XLSX/ XLS'''
 
-df = pd.read_csv('example.csv', names=[0,1,2,3,4])
-df.to_excel('example.xlsx')
-df.to_excel('example.xls')
+df = pd.read_csv('../data/example.csv', names=[0,1,2,3,4])
+df.to_excel('../data/example.xlsx')
+df.to_excel('../data/example.xls')
 
-df = pd.read_excel('example.xlsx', sheet=0)
+df = pd.read_excel('../data/example.xlsx', sheet=0)
 
 # Import the excel file and call it xls_file
-xls_file = pd.ExcelFile('example.xls')
+xls_file = pd.ExcelFile('../data/example.xls')
 xls_file.sheet_names
 df = xls_file.parse('Sheet1')

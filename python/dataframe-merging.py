@@ -1,4 +1,4 @@
-'''dataframe operations in Python'''
+'''dataframe merge operations in Python'''
 
 import pandas as pd
 import numpy as np

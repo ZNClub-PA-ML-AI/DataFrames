@@ -23,7 +23,3 @@ Explore all methods and feautures available for DataFrame based operation
 
 -[SYNTACTICAL Py.DataFrame vs R.DataFrame](http://datascience-enthusiast.com/R/pandas_datatable.html)
 -[FILTER PERFORMANCE](https://www.statworx.com/de/blog/pandas-vs-data-table-a-study-of-data-frames/)
-
-tyasdfghjklzxcvbnm,./'[;]'
-
-tyasdfghjklzxcvbnm

@@ -3,15 +3,13 @@ Explore all methods and feautures available for DataFrame based operation
 
 # Features
 
-1. create DF
-2. slice rows and/or columns of DF
-3. conditional subset rows of DF
-4. add columns in DF
-5. merge columns of more than one DF
-6. merge rows of more than one DF
-7. transpose DF
-8. pivot DF
-9. export DF
+- create/- export DF
+- slice rows and/or columns of DF
+- conditional subset rows of DF
+- add/ update/ rename/ delete columns in DF
+- joins of DF
+- merge rows of more than one DF
+- transpose/ pivot DF
 
 # Resources
 
@@ -22,4 +20,5 @@ Explore all methods and feautures available for DataFrame based operation
 # Python vs R vs Spark
 
 -[SYNTACTICAL Py.DataFrame vs R.DataFrame](http://datascience-enthusiast.com/R/pandas_datatable.html)
+
 -[FILTER PERFORMANCE](https://www.statworx.com/de/blog/pandas-vs-data-table-a-study-of-data-frames/)

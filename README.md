@@ -3,7 +3,7 @@ Explore all methods and feautures available for DataFrame based operation
 
 # Features
 
-- create/- export DF
+- create/ export DF
 - slice rows and/or columns of DF
 - conditional subset rows of DF
 - add/ update/ rename/ delete columns in DF
@@ -19,6 +19,5 @@ Explore all methods and feautures available for DataFrame based operation
 
 # Python vs R vs Spark
 
--[SYNTACTICAL Py.DataFrame vs R.DataFrame](http://datascience-enthusiast.com/R/pandas_datatable.html)
-
--[FILTER PERFORMANCE](https://www.statworx.com/de/blog/pandas-vs-data-table-a-study-of-data-frames/)
+- [SYNTACTICAL Py.DataFrame vs R.DataFrame](http://datascience-enthusiast.com/R/pandas_datatable.html)
+- [FILTER PERFORMANCE](https://www.statworx.com/de/blog/pandas-vs-data-table-a-study-of-data-frames/)

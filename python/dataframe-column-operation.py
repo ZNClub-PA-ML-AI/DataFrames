@@ -31,12 +31,20 @@ np_columns = df.columns.values
 ''' link: https://stackoverflow.com/questions/19482970/get-list-from-pandas-dataframe-column-headers '''
 fastest_converted_to_list = df.columns.values.tolist()
 
-
 '''select subset of columns'''
 df = df2
 columns = list(df)
 df3 = df[columns[-2:]]
 
-'''Pandas Object vs Copy of Pandas Object'''
+'''select columns using indexing'''
+df_by_col_indices = df.loc[:-2])
+df_by_col_names = df.loc['B':'D']
+'''select columns using indexing, Pandas Object vs Copy of Pandas Object https://realpython.com/copying-python-objects/ https://pandas.pydata.org/pandas-docs/version/0.22/generated/pandas.DataFrame.copy.html'''
 df4 = df.iloc[:, -2:]
 
+'''apply operation on all columns '''
+X_num = df.copy()
+# Scaling the numeric features using standardization
+X_num = (X_num - X_num.mean()) / X_num.std()
+X_num = X_num.fillna(X_num.mean())
+X_num.head()

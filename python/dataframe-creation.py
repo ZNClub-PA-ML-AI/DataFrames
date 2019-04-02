@@ -21,6 +21,17 @@ df = pd.DataFrame({ 'A' : 1.,
                 'D' : np.array([3] * 4,dtype='int32'), 
                 'E' : pd.Categorical(["test","train","test","train"]) })
 
+'''read from clipboard'''
+'''select and copy the below dataframe
+  A         B1         B2    C  D      E
+ 0  1 2013-01-02 2013-01-01  1.0  3   test
+ 1  1 2013-01-02 2013-01-02  1.0  3  train
+ 2  1 2013-01-02 2013-01-03  1.0  3   test
+ 3  1 2013-01-02 2013-01-04  1.0  3  train
+'''
+df_from_clipboard = pd.read_clipboard()
+  
+
 '''
 Format     Data                 Reader - Writer
 text    CSV                    read_csv    to_csv

@@ -3,6 +3,20 @@
 import pandas as pd
 import numpy as np
 
+
+## without index
+
+df1 = pd.read_csv('../data/source1.csv')
+df2 = pd.read_csv('../data/source2.csv')
+print(df1.shape, df2.shape)
+
+pandas_merged = pd.merge(left=df1, right=df2, on='id')
+
+dataframe_merged = df1.merge(right=df2, on='id')
+
+
+## with specifying index
+
 '''break major df into n minor dfs and join using index '''
 total_values = 3
 a = ['A'+str(i) for i in range(total_values)]
